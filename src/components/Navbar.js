@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../components/img/books.png';
+import Logout from '../components/atoms/logout';
 
 const Navbar = () => {
   return (
@@ -37,11 +38,20 @@ const Navbar = () => {
                 Login
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/profile">
-                Profile
-              </Link>
-            </li>
+            
+              <li className="nav-item">
+                <Link className="nav-link" to="/profile">
+                  Profile
+                </Link>
+              </li>
+            
+            
+              <li className="nav-item">
+                <button className="btn btn-primary" onClick={Logout}>
+                  Logout
+                </button>
+              </li>
+            
           </ul>
         </div>
       </div>
